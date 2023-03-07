@@ -1,0 +1,31 @@
+// div[scrollx=true],div[scrolly=true] {
+//     position: relative;
+//     overflow: hidden;
+//   }
+  
+//   div[scrollx=true] {
+//     overflow-x: auto;
+//   }
+  
+//   div[scrolly=true] {
+//     overflow-y: auto;
+//   }
+//   #scroll-list{
+//     height: 44px;
+//   }
+
+
+div[scrollx=true] {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-item {
+    flex: 0 0 auto;
+  }
+}
+ion-icon[name="flash"], ion-icon[name="lock-closed"]{
+  color: var(--main-color);
+}

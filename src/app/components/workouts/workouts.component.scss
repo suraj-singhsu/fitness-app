@@ -1,0 +1,40 @@
+.title{
+    position: absolute;
+    bottom: 40px;
+    color: var(--main-color);
+    padding: 0px 10px;
+};
+.desc{
+    position: absolute;
+    bottom: 8px;
+    // color: var(--main-color);
+    color: white;
+    padding: 0px 10px;
+}
+ion-img::part(image){
+    border-radius: 5px !important;
+    --border-radius: 5px !important;
+    // opacity: 0.6;
+};
+ion-icon[name="flash"], ion-icon[name="lock-closed"]{
+    color: var(--main-color);
+}
+.levels-section{
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50px;
+    padding: 6px 7px;
+    position: relative;
+    left: -133px;
+    top: 45px;
+}
+
+.lock-section{
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50px;
+    padding: 6px 7px;
+    position: relative;
+    right: -128px;
+    top: 45px;
+}

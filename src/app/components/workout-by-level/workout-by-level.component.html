@@ -1,0 +1,11 @@
+<ng-container *ngIf="levels.length > 0">
+  <!-- <ion-scroll scrollX="true"> -->
+    <div scrollX="true" id="scroll-list" class="scroll">
+  
+      <ion-chip *ngFor="let item of levels; let i = index">
+        <ion-icon name="flash" ></ion-icon>
+        <ion-label>{{item.title}}</ion-label>
+      </ion-chip>
+  <!-- </ion-scroll> -->
+  </div>
+</ng-container>

@@ -1,9 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>Commit To Fit</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <app-heading [label]="'Primium Workout'"></app-heading>
+  <app-workouts></app-workouts>
 
+  <app-heading (click)="doLogin()" [label]="'Workout By Goal'"></app-heading>
+  <app-workout-by-goal></app-workout-by-goal>
+
+  <app-heading [label]="'Workout By Level'"></app-heading>
+  <app-workout-by-level></app-workout-by-level>
+  
+  <app-heading [label]="'Latest Diets'"></app-heading>
 </ion-content>
