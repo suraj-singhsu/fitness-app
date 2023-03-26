@@ -1,33 +1,76 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Register</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <!-- <form> -->
-    <ion-item lines="full">
-      <ion-label position="floating">First name</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Last name</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
-    </ion-item>
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Sign Up</ion-button>
-      </ion-col>
-    </ion-row>
-  <!-- </form> -->
+<ion-content class="login_bg">
+  <ion-grid>
+      <img src="assets/img/fitness.gif">
+      <form [formGroup]="signupForm" (ngSubmit)="doSignup()">
+          <fieldset>
+            <legend>Full Name</legend>
+            <ion-row>
+              <ion-col size="12">
+                <ion-input placeholder="Full Name" formControlName="full_name" autocapitalize="off" ></ion-input>
+              </ion-col>
+            </ion-row>
+          </fieldset>
+
+          <fieldset> 
+            <legend>Mobile</legend>
+            <ion-row>
+              <ion-col size="12">
+                <ion-input type="tel" placeholder="Mobile" autocapitalize="off" formControlName="phone"></ion-input>
+              </ion-col>
+            </ion-row>
+          </fieldset> 
+            
+         
+            <fieldset>
+              <legend>Email</legend>
+              <ion-row>
+                <ion-col size="12">
+                    <ion-input placeholder="Email" formControlName="email" autocapitalize="off"></ion-input>
+                </ion-col>
+              </ion-row>
+            </fieldset> 
+            
+            
+            <fieldset>
+              <legend>Password</legend>
+              <ion-row>
+                <ion-col size="12">
+                <ion-input [type]="passwordType1" placeholder="Password" formControlName="password"  autocapitalize="off"
+                [(ngModel)]="password" >
+                </ion-input>
+                <ion-icon [name]="passwordIcon1" (click)='show_hide_password()'></ion-icon>
+                </ion-col>
+              </ion-row>
+            </fieldset> 
+
+          <fieldset>
+            <legend>Confirm Password</legend>
+            <ion-row>
+              <ion-col size="12">
+                <ion-input [type]="passwordType2" placeholder="Confirm Password" formControlName="confirm_password">
+                </ion-input>
+                <ion-icon [name]="passwordIcon2" (click)='hideShowPassword2()'></ion-icon>
+              </ion-col>
+            </ion-row>
+          </fieldset> 
+        
+
+          <ion-row>
+            <ion-col size="12" class="ion-text-center ion-no-padding">
+              <ion-button type="submit" expand="block" [disabled]="!signupForm.valid">Sign Up</ion-button>
+            </ion-col>
+          </ion-row>
+     
+      </form>
+      <ion-row class="login-section">
+        <ion-col size="12" text-center class="before_sec">
+          
+          <p>Already have an account? <a href="#" [routerLink]="['/login']" routerDirection="forward">SignIn</a></p>
+        </ion-col>
+      </ion-row>
+      <p class="ion-text-center">Or</p>
+      <app-login-with-social-media></app-login-with-social-media>
+      <p>&nbsp;</p>
+  </ion-grid>
+
 </ion-content>

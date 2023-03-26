@@ -1,14 +1,16 @@
 <ion-header>
   <ion-toolbar>
+    <ion-menu-button slot="start" class="app-side-menu"></ion-menu-button>
     <ion-title>Commit To Fit</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <app-heading [label]="'Primium Workout'"></app-heading>
+  <p> App is running in {{device_platform}}</p>
+  <app-heading [label]="'Primium Workout'" routerLink="/workouts"></app-heading>
   <app-workouts></app-workouts>
 
-  <app-heading (click)="doLogin()" [label]="'Workout By Goal'"></app-heading>
+  <app-heading [label]="'Workout By Goal'"></app-heading>
   <app-workout-by-goal></app-workout-by-goal>
 
   <app-heading [label]="'Workout By Level'"></app-heading>

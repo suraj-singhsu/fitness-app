@@ -1,0 +1,21 @@
+ion-button{
+    width: 100%;
+    --border-radius: 50px;
+    height: 60px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    --background: #20A1F2;
+    --background-activated: #20A1F2;
+    --background-focused: #20A1F2;
+    --background-hover: #20A1F2;
+    font-weight: 800;
+}
+ion-icon {
+    color: #fff;
+    font-size: 22px;
+    padding-top: 0;
+    position: absolute;
+    left: 15px;
+}

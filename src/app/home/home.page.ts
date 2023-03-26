@@ -1,19 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from "../services/common.service";
-import { Storage } from "@ionic/storage-angular";
+import { Platform } from '@ionic/angular';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
+  total_products: any = 0;
+  products: any = [];
+  device_platform: any = '';
   constructor(
     public commonService: CommonService,
-    private storage: Storage
-  ) { }
+    public platform: Platform
+  ) {
+    console.log(this.platform.platforms());
+    console.log("-", this.platform.is('ios'));
+    this.device_platform = JSON.stringify(this.platform.platforms());
+  }
 
   ngOnInit() {
+  
+  }
+
+  ionViewWillEnter(){
+    console.log("qwerty");
+    let sendData = {
+      page_no: 1,
+    }
+    this.commonService.getWorkouts(sendData).subscribe((res : any) => {
+      console.log("prod:", res);
+      if(res['products']){
+        this.products = res['products'];
+        this.total_products = res['total'];
+        console.log("products:", this.products);
+        
+      }
+    });
   }
   slideOpts = {
     initialSlide: 1,
@@ -21,16 +45,6 @@ export class HomePage implements OnInit {
   };
 
 
-  doLogin(){
-    let sendData = {
-      username: 'kminchelle',
-      password: '0lelplR',
-      // expiresInMins: 60, // optional
-    };
-    this.commonService.login(sendData).subscribe((res) => {
-      console.log("res:", res);
-      this.storage.set("loginInfo", res);
-    });
+  
 
-  }
 }

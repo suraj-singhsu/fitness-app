@@ -1,0 +1,122 @@
+
+ion-content {
+    --background: transparent;
+    ion-icon {
+        color: #dcdce0;
+        font-size: 22px;
+        padding-top: 0px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translate(0%, -50%);
+        z-index: 99;
+    }
+    ion-label {
+        color: #aeaeae;
+        font-size: 16px;
+    }
+    ion-input{
+        --padding-start: 0px;
+        --padding-top: 11px;
+        --padding-end: 8px;
+        --padding-bottom: 10px;
+        font-size: 14px;
+        --placeholder-opacity: 1;
+        --placeholder-color: #a59e9e;
+        width: 100%;
+        letter-spacing: 1px;
+    }
+}
+
+.border_row {
+    margin-bottom: 0px;
+    border-top: none;
+}
+ion-button{
+    width: 89%;
+    margin: auto;
+    --border-radius: 24px;
+    height: 51px;
+    font-size: 17px;
+    margin-top: 18px;
+    --background: #20A1F2;
+    --background-activated: #20A1F2;
+    --background-focused: #20A1F2;
+    --background-hover: #20A1F2;
+    text-transform: unset;
+}
+.login-section {
+    p {
+        color: #444;
+        letter-spacing: 1px;
+        font-size: 15px;
+        padding: 0px 24px;
+        margin: 5px;
+        text-align: center;
+        margin-bottom: 19px;
+
+        a {
+            color: #20A1F2;
+            text-decoration: none;
+            margin-top: 14px;
+            font-family: Mulish-Bold;
+        }
+    }
+}
+.login-section {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 14px;
+    .before_sec {
+        position: relative;
+        outline: none;
+    }
+}
+fieldset {
+    border-radius: 50px;
+    padding: 0;
+    max-width: 95%;
+    margin: auto;
+    margin-bottom: 25px;
+    padding-inline-start: 1em;
+
+    legend{
+        padding-inline-start: 5px;
+        color: #888888;
+        padding-inline-end: 5px;
+        font-family: Mulish-Regular!important;
+        letter-spacing: 1px;
+    }
+    ion-row {
+        max-width: 100%;
+        width: 100%;
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.49);
+        padding: 0px 0px;
+        margin-bottom: 0px;
+        position: relative;
+        bottom: 4px;
+        padding-left: 0;
+    }
+}
+
+ion-icon[name="eye-off"] {
+    right: 13px;
+    left: auto !important;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    z-index: 9999;
+    color: #ababab!important;
+    font-size: 25px!important;
+}
+ion-icon[name="eye"] {
+    right: 13px;
+    left: auto !important;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    z-index: 9999;
+    color: #ababab!important;
+    font-size: 25px!important;
+}

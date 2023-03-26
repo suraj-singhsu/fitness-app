@@ -26,6 +26,20 @@
 @import "~@ionic/angular/css/flex-utils.css";
  // main color: #19e28c
  // MAIN RGBA: rgb(18,228,137)
-ion-title{
-    text-align: center;
+
+
+ion-toolbar{
+    --background: var(--main-color);
+    --border-width: 0;
+    color: white;
+    ion-title{
+        text-align: center;
+    }
+    ion-icon[name="add"]{
+        font-size: 25px;
+    }
+}
+ion-input[type="submit"]{
+    --background: var(--main-color) !important;
+    color: white;
 }
